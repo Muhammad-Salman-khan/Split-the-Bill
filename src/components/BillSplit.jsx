@@ -14,7 +14,7 @@ const BillSplit = () => {
   const [PaidByUser, setPaidByUser] = useState("");
   const [WhoIsPaying, setWhoIsPaying] = useState("user");
   const FriendShare = Bill ? Bill - PaidByUser : "";
-  const PickInfo = (id, name, balance) => {
+  const PickInfo = (id, name) => {
     setSelectId(id !== SelectId ? id : null);
     setSelectName(name !== SelectName ? name : null);
   };
@@ -39,7 +39,6 @@ const BillSplit = () => {
         e.id === SelectId ? { ...e, balance: e.balance + value } : e
       )
     );
-    console.log(value);
   };
   return (
     <>
